@@ -50,3 +50,17 @@
 .options-form label{
     margin-left: 5px;
 }
+@media screen and (max-width: 567px) {
+    .options{
+        width: 90%;
+        margin: 30px auto;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+    .question{
+        width: 80%;
+        flex-direction: column;
+    }
+    .options-form div{
+        padding: 20px;
+    }
+}

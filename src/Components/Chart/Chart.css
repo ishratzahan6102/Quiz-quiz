@@ -22,9 +22,12 @@
     width:80%;
     text-align: justify;
 }
-.area-chart{
-    width: 700px;
-    height: 200px;
+@media screen and (max-width: 567px) {
+    .chart-details {
+        width: 90%;
+        margin: 0 auto;
+        text-align: justify;
+    }
 }
 
 
