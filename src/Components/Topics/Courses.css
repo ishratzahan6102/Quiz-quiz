@@ -1,0 +1,73 @@
+.carts{
+    padding: 100px;
+}
+.courses-carts{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 80px;
+}
+.carts h1{
+    margin: 80px ;
+    font-size: 2.3rem;
+    color: rgb(37, 4, 184);
+    text-align: center;
+}
+.page-heading{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 100px;
+    padding: 40px;
+    text-align: start;
+    margin-left: 30px;
+}
+.heading-image img{
+    width: 100%;
+    box-shadow: rgba(49, 46, 240, 0.4) 5px 5px, rgba(75, 46, 240, 0.3) 10px 10px, rgba(65, 46, 240, 0.2)15px 15px, rgba(49, 46, 240, 0.1) 20px 20px, rgba(49, 46, 240, 0.05) 25px 25px;
+}
+.heading-image{
+    padding: 20px;
+}
+.heading-details p{
+    text-align: justify;
+    
+}
+.heading-details h1 {
+    margin-top: 20px;
+    color: rgb(37, 4, 184) ;
+   border-bottom: 1px solid goldenrod;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+.brain-icon{
+    color: palevioletred;
+}
+
+@media screen and (max-width: 567px ) {
+    .courses-carts{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .page-heading{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .heading-image{
+        padding: 0px;
+    }
+    .carts{
+        padding: 60px;
+    }
+    .carts h1{
+        margin: 30px;
+        font-size: 2rem;
+        color: rgb(37, 4, 184);
+        text-align: center;
+    }
+    .heading-details h1 {
+        text-align: center;
+    }
+    .heading-details p{
+        text-align: center;
+        
+    }
+}

@@ -1,0 +1,52 @@
+.options-form{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.options{
+    width: 70%;
+    margin: 30px auto;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.options-form div{
+    text-align: start;
+    padding: 30px 20px;
+    border: 1px solid rgb(37, 4, 184);
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+.options-form input{
+    margin-left: 20px;
+}
+.question{
+    width: 68%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+}
+.question button{
+   color: goldenrod;
+   border: none;
+   height: 20px;
+   font-size: large;
+   border-radius: 5px;
+   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+.question span{
+    font-weight:500 ;
+    font-size: large;
+    margin: 10px 0;
+    color: rgb(37, 4, 184) ;
+    padding: 10px;
+    border-radius: 10px;
+    
+
+}
+.quiz h1{
+    color: rgb(37, 4, 184);
+    margin-top: 150px;
+}
+.options-form label{
+    margin-left: 5px;
+}

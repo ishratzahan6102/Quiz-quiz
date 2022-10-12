@@ -5,10 +5,15 @@ import './Header.css'
 const Header = () => {
     return (
         <div className='navbar'>
-            <NavLink to='/'>Home</NavLink>
-            <NavLink to='/courses'>Courses</NavLink>
-            <NavLink to='/chart'>Chart</NavLink>
-            <NavLink to='/blog'>Blog</NavLink>
+            <div className="navbar-logo">
+            <img src='favicon.ico' alt=''/>
+            <span>Quiz-quiz</span>
+            </div>
+            <div className="navbar-list">
+            <NavLink className={({isActive}) => isActive ? "active" : "inActive"} to='/topics'>Topics</NavLink>
+            <NavLink className={({isActive}) => isActive ? "active" : "inActive"} to='/chart'>Chart</NavLink>
+            <NavLink className={({isActive}) => isActive ? "active" : "inActive"} to='/blog'>Blog</NavLink>
+            </div>
         </div>
     );
 };

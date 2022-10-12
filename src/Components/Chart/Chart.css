@@ -1,0 +1,30 @@
+.charts{
+    margin-left: 20px;
+    margin-bottom: 200px;
+    
+}
+.chart{
+   margin-top: 100px;
+}
+.chart-heading{
+    text-align: start;
+    margin-left: 40px;
+    line-height: 1rem;
+}
+.chart-heading p{
+    color: #2504b8;
+}
+.chart-details{
+    text-align: start;
+}
+.chart-details {
+    margin-left: 50px;
+    width:80%;
+    text-align: justify;
+}
+.area-chart{
+    width: 700px;
+    height: 200px;
+}
+
+
