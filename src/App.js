@@ -1,12 +1,12 @@
 import './App.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Home from './Components/Home/Home';
 import Main from './Layout/Main';
 import Chart from './Components/Chart/Chart';
 import Blog from './Components/Blog/Blog';
 import NotFound from './Components/NotFound/NotFound';
 import CourseDetails from './Components/CourseDetails/CourseDetails';
 import Topics from './Components/Topics/Courses';
+import Home from './Components/Home/Home';
 
 function App() {
   const router = createBrowserRouter([
@@ -16,7 +16,11 @@ function App() {
       children : [
         {
           path: '/',
-          element: <Topics></Topics> ,
+          element: <Home></Home>,
+        },
+        {
+          path: '/home',
+          element: <Home></Home>,
         },
         {
           path: '/topics',

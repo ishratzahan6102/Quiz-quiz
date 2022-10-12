@@ -1,5 +1,3 @@
-import { faBrain } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import Course from '../Course/Course';
@@ -7,6 +5,7 @@ import './Courses.css'
 
 const Topics = () => {
     const courses = useLoaderData()
+    console.log(courses)
     return (
         <div className='courses'>
             <div className='page-heading'>

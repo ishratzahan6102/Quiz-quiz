@@ -10,6 +10,7 @@ const Header = () => {
             <span>Quiz-quiz</span>
             </div>
             <div className="navbar-list">
+            <NavLink className={({isActive}) => isActive ? "active" : "inActive"} to='/home'>Home</NavLink>
             <NavLink className={({isActive}) => isActive ? "active" : "inActive"} to='/topics'>Topics</NavLink>
             <NavLink className={({isActive}) => isActive ? "active" : "inActive"} to='/chart'>Chart</NavLink>
             <NavLink className={({isActive}) => isActive ? "active" : "inActive"} to='/blog'>Blog</NavLink>
