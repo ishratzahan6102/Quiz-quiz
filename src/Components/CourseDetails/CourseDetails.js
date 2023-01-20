@@ -5,178 +5,189 @@ import { useLoaderData } from 'react-router-dom';
 import './CourseDetails.css'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import Card from './Card';
+import bg from "../../1945.jpg"
 
 const CourseDetails = () => {
     const course = useLoaderData()
-    console.log(course)
-    
-    const correctAnswer1 = (id) =>{
-        
-        
-        console.log(id);
-        var ele = document.getElementsByName('fav_language1');
-              
-        for( let i = 0; i < ele.length; i++) {
-            if(ele[i].checked){
-                const answer = ele[i].value;
-                if(answer === id){
-                    toast("Your answer is correct!")
-                }
-                else{
-                    toast("Your answer is wrong!!!")
-                    toast("Correct Answer : "+id)
-                }
-            }
-    
-        }
-       const options = document.getElementsByClassName('quiz-1');
-       for(let option of options){
-        if(option.innerText === id){
-            option.parentNode.style.backgroundColor = "#bee8ae";
-            option.parentNode.style.border = "1px solid green"
-        }
-        else{
-            console.log(option.innerText)
-            option.parentNode.style.backgroundColor = '#ed9191'
-            option.parentNode.style.border = "1px solid red"
-        }
-       } 
-    }
+    const tests = course.data.questions
+    // const correctAnswer1 = (id) =>{
+
+    //     console.log(id);
+    //     var ele = document.getElementsByName('fav_language1');
+
+    //     for( let i = 0; i < ele.length; i++) {
+    //         if(ele[i].checked){
+    //             const answer = ele[i].value;
+    //             if(answer === id){
+    //                 toast("Your answer is correct!")
+    //             }
+    //             else{
+    //                 toast("Your answer is wrong!!!")
+    //                 toast("Correct Answer : "+id)
+    //             }
+    //         }
+
+    //     }
+    //    const options = document.getElementsByClassName('quiz-1');
+    //    for(let option of options){
+    //     if(option.innerText === id){
+    //         option.parentNode.style.backgroundColor = "#bee8ae";
+    //         option.parentNode.style.border = "1px solid green"
+    //     }
+    //     else{
+    //         console.log(option.innerText)
+    //         option.parentNode.style.backgroundColor = '#ed9191'
+    //         option.parentNode.style.border = "1px solid red"
+    //     }
+    //    } 
+    // }
 
 
-    const correctAnswer2 = (id) =>{
-        
-        var ele = document.getElementsByName('fav_language2');
-              
-        for( let i = 0; i < ele.length; i++) {
-            if(ele[i].checked){
-                const answer = ele[i].value;
-                if(answer === id){
-                    toast("Correct Answer!")
-                }
-                else{
-                    toast("Wrong Answer!!!")
-                    toast("Correct Answer : "+id)
-                }
-            }
-    
-        }
-       const options = document.getElementsByClassName('quiz-2');
-       for(let option of options){
-        if(option.innerText === id){
-            option.parentNode.style.backgroundColor = "#bee8ae";
-            option.parentNode.style.border = "1px solid green"
-        }
-        else{
-            option.parentNode.style.backgroundColor = '#ed9191'
-            option.parentNode.style.border = "1px solid red"
-        }
-       } 
-    }
+    // const correctAnswer2 = (id) =>{
 
-    const correctAnswer3 = (id) =>{
-        
-        var ele = document.getElementsByName('fav_language3');
-              
-        for( let i = 0; i < ele.length; i++) {
-            if(ele[i].checked){
-                const answer = ele[i].value;
-                if(answer === id){
-                    toast("Correct Answer!")
-                }
-                else{
-                    toast("Wrong Answer!!!")
-                    toast("Correct Answer : "+id)
-                }
-            }
-    
-        }
-       const options = document.getElementsByClassName('quiz-3');
-       for(let option of options){
-        if(option.innerText === id){
-            option.parentNode.style.backgroundColor = "#bee8ae";
-            option.parentNode.style.border = "1px solid green"
-        }
-        else{
-            option.parentNode.style.backgroundColor = '#ed9191'
-            option.parentNode.style.border = "1px solid red"
-        }
-       } 
-    }
+    //     var ele = document.getElementsByName('fav_language2');
 
+    //     for( let i = 0; i < ele.length; i++) {
+    //         if(ele[i].checked){
+    //             const answer = ele[i].value;
+    //             if(answer === id){
+    //                 toast("Correct Answer!")
+    //             }
+    //             else{
+    //                 toast("Wrong Answer!!!")
+    //                 toast("Correct Answer : "+id)
+    //             }
+    //         }
 
-    const correctAnswer4 = (id) =>{
-        
-        console.log(id)
-        var ele = document.getElementsByName('fav_language4');
-              
-        for( let i = 0; i < ele.length; i++) {
-            if(ele[i].checked){
-                const answer = ele[i].value;
-                if(answer === id){
-                    toast("Correct Answer!")
-                }
-                else{
-                    toast("Wrong Answer!!!")
-                    toast("Correct Answer : "+id)
-                }
-            }
-    
-        }
-       const options = document.getElementsByClassName('quiz-4');
-       for(let option of options){
-        if(option.innerText === id){
-            
-            option.parentNode.style.backgroundColor = "#bee8ae";
-            option.parentNode.style.border = "1px solid green"
-        }
-        else{
-            console.log(option.innerText)
-            option.parentNode.style.backgroundColor = '#ed9191'
-            option.parentNode.style.border = "1px solid red"
-        }
-       } 
-    }
+    //     }
+    //    const options = document.getElementsByClassName('quiz-2');
+    //    for(let option of options){
+    //     if(option.innerText === id){
+    //         option.parentNode.style.backgroundColor = "#bee8ae";
+    //         option.parentNode.style.border = "1px solid green"
+    //     }
+    //     else{
+    //         option.parentNode.style.backgroundColor = '#ed9191'
+    //         option.parentNode.style.border = "1px solid red"
+    //     }
+    //    } 
+    // }
+
+    // const correctAnswer3 = (id) =>{
+
+    //     var ele = document.getElementsByName('fav_language3');
+
+    //     for( let i = 0; i < ele.length; i++) {
+    //         if(ele[i].checked){
+    //             const answer = ele[i].value;
+    //             if(answer === id){
+    //                 toast("Correct Answer!")
+    //             }
+    //             else{
+    //                 toast("Wrong Answer!!!")
+    //                 toast("Correct Answer : "+id)
+    //             }
+    //         }
+
+    //     }
+    //    const options = document.getElementsByClassName('quiz-3');
+    //    for(let option of options){
+    //     if(option.innerText === id){
+    //         option.parentNode.style.backgroundColor = "#bee8ae";
+    //         option.parentNode.style.border = "1px solid green"
+    //     }
+    //     else{
+    //         option.parentNode.style.backgroundColor = '#ed9191'
+    //         option.parentNode.style.border = "1px solid red"
+    //     }
+    //    } 
+    // }
 
 
-    const correctAnswer5 = (id) =>{
-        
-        var ele = document.getElementsByName('fav_language5');
-              
-        for( let i = 0; i < ele.length; i++) {
-            if(ele[i].checked){
-                const answer = ele[i].value;
-                if(answer === id){
-                    toast("Correct Answer!")
-                }
-                else{
-                    toast("Wrong Answer!!!")
-                    toast("Correct Answer : "+id)
-                }
-            }
-    
-        }
-       const options = document.getElementsByClassName('quiz-5');
-       for(let option of options){
-        if(option.innerText === id){
-            option.parentNode.style.backgroundColor = "#bee8ae";
-            option.parentNode.style.border = "1px solid green"
-        }
-        else{
-            option.parentNode.style.backgroundColor = '#ed9191'
-            option.parentNode.style.border = "1px solid red"
-        }
-       } 
-    }
+    // const correctAnswer4 = (id) =>{
+
+    //     console.log(id)
+    //     var ele = document.getElementsByName('fav_language4');
+
+    //     for( let i = 0; i < ele.length; i++) {
+    //         if(ele[i].checked){
+    //             const answer = ele[i].value;
+    //             if(answer === id){
+    //                 toast("Correct Answer!")
+    //             }
+    //             else{
+    //                 toast("Wrong Answer!!!")
+    //                 toast("Correct Answer : "+id)
+    //             }
+    //         }
+
+    //     }
+    //    const options = document.getElementsByClassName('quiz-4');
+    //    for(let option of options){
+    //     if(option.innerText === id){
+
+    //         option.parentNode.style.backgroundColor = "#bee8ae";
+    //         option.parentNode.style.border = "1px solid green"
+    //     }
+    //     else{
+    //         console.log(option.innerText)
+    //         option.parentNode.style.backgroundColor = '#ed9191'
+    //         option.parentNode.style.border = "1px solid red"
+    //     }
+    //    } 
+    // }
+
+
+    // const correctAnswer5 = (id) =>{
+
+    //     var ele = document.getElementsByName('fav_language5');
+
+    //     for( let i = 0; i < ele.length; i++) {
+    //         if(ele[i].checked){
+    //             const answer = ele[i].value;
+    //             if(answer === id){
+    //                 toast("Correct Answer!")
+    //             }
+    //             else{
+    //                 toast("Wrong Answer!!!")
+    //                 toast("Correct Answer : "+id)
+    //             }
+    //         }
+
+    //     }
+    //    const options = document.getElementsByClassName('quiz-5');
+    //    for(let option of options){
+    //     if(option.innerText === id){
+    //         option.parentNode.style.backgroundColor = "#bee8ae";
+    //         option.parentNode.style.border = "1px solid green"
+    //     }
+    //     else{
+    //         option.parentNode.style.backgroundColor = '#ed9191'
+    //         option.parentNode.style.border = "1px solid red"
+    //     }
+    //    } 
+    // }
 
 
 
 
     return (
         <div className='quiz'>
-           <h1>Quiz of {course.data.name}</h1>
-           <div className='question'>
+
+            <div className='relative mb-40'>
+            <img className="w-full h-full lg:h-72 " src={bg} />
+            <h1 className='p-6 lg:p-10 text-2xl left-1/4 lg:text-4xl absolute top-1/4 lg:top-[220px]  font-bold text-black shadow-sm uppercase w-1/2 bg-white mx-auto ' >{course.data.name}</h1>
+            </div>
+            <div className='grid grid-cols-1 gap-4 p-20 '>
+                {
+                    tests.map(test => <Card
+                        test={test}
+                        key={test.id}>
+                    </Card>)
+                }
+            </div>
+            {/* <div className='question'>
                 <span>Quiz 1: {course.data.questions[6].question}</span>
                 <button onClick={() => correctAnswer1(course.data.questions[6].correctAnswer)} ><FontAwesomeIcon icon={faEye}></FontAwesomeIcon></button><ToastContainer />
            </div>
@@ -303,9 +314,9 @@ const CourseDetails = () => {
                     <label className='quiz-5' >{course.data.questions[4].options[3]}</label>
                    </div>
                 </form>
-           </div>
+           </div> */}
 
-           
+
         </div>
     );
 };
